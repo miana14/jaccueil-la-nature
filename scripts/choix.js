@@ -1,26 +1,38 @@
+// Script pour laisser la couleur quand la page est active
 $(document).ready(function(){ 
-    // if(page=="accueil"){
-    //     $("#linkIdee").removeClass("choix");
-    //     $("#linkAccueil").addClass("choix");
-    // }
-    // if(page=="idees"){
-    //     $("#linkAccueil").removeClass("choix");
-    //     $("#linkIdee").addClass("choix");
-    // }   
-    if($("main").hasClass("index")){
-        $("#linkMentions,#linkContact","#linkActualites").removeClass("choix");
-        $("#linkIndex").addClass("choix");
+    if(page=="index"){
+        $("#linkActualites").removeClass("choix");
+        $("#linkPlanning").removeClass("choix");
+        $("#linkMentions").removeClass("choix");
+        $("#linkContact").removeClass("choix");
+        $("#linkAccueil").addClass("choix");
     }
-    if($("main").hasClass("mentions")){
-        $("#linkIndex,#linkContact","#linkActualites").removeClass("choix");
-        $("#linkMentions").addClass("choix");
-        }
-    if($("main").hasClass("contact")){
-        $("#linkIndex,#linkIdee","#linkActualites").removeClass("choix");
-        $("#linkContact").addClass("choix");
-        }
-    if($("main").hasClass("actualites")){
-        $("#linkIndex,#linkMentions","#linkContact").removeClass("choix");
+    if(page=="actus"){
+        $("#linkAccueil").removeClass("choix");
+        $("#linkPlanning").removeClass("choix");
+        $("#linkMentions").removeClass("choix");
+        $("#linkContact").removeClass("choix");
         $("#linkActualites").addClass("choix");
-        }
-})
+    }
+    if(page=="contact"){
+        $("#linkActualites").removeClass("choix");
+        $("#linkPlanning").removeClass("choix");
+        $("#linkMentions").removeClass("choix");
+        $("#linkAccueil").removeClass("choix");
+        $("#linkContact").addClass("choix");
+    }
+    if(page=="planning"){
+        $("#linkActualites").removeClass("choix");
+        $("#linkAccueil").removeClass("choix");
+        $("#linkMentions").removeClass("choix");
+        $("#linkContact").removeClass("choix");
+        $("#linkPlanning").addClass("choix");
+    }
+    if(page=="mentions"){
+        $("#linkActualites").removeClass("choix");
+        $("#linkPlanning").removeClass("choix");
+        $("#linkAccueil").removeClass("choix");
+        $("#linkContact").removeClass("choix");
+        $("#linkMentions").addClass("choix");
+    }
+});
